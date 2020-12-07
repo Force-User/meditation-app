@@ -35,11 +35,11 @@ function checkPlaying() {
   if (song.paused) {
     song.play();
     video.play();
-    playButton.src = "image/svg/pause.svg";
+    playButton.src = "Image/svg/pause.svg";
   } else {
     song.pause();
     video.pause();
-    playButton.src = "image/svg/play.svg";
+    playButton.src = "Image/svg/play.svg";
   }
 }
 
@@ -55,7 +55,7 @@ song.ontimeupdate = () => {
     song.pause();
     video.pause();
     song.currentTime = 0;
-    playButton.src = "image/svg/play.svg";
+    playButton.src = "Image/svg/play.svg";
   }
 };
 
