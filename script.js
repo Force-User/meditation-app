@@ -44,8 +44,8 @@ function checkPlaying() {
 }
 
 song.ontimeupdate = () => {
-  let currentTime = song.currentTime;
-  let elapsed = fakeDuration - currentTime;
+  const currentTime = song.currentTime;
+  const elapsed = fakeDuration - currentTime;
   let seconds = Math.floor(elapsed % 60);
   let minutes = Math.floor(elapsed / 60);
   let progress = outlineLength - (currentTime / fakeDuration) * outlineLength;
@@ -74,7 +74,7 @@ function selectedTime(elem) {
 
 function checkZeroInTime(time) {
     if(time < 10) {
-        return "0" + time;
+        return `0${time}`;
     } 
     return time;
 }
