@@ -14,13 +14,14 @@ outline.style.strokeDasharray = outlineLength;
 outline.style.strokeDashoffset = outlineLength;
 
 timeSelect.addEventListener("click", (event) => {
-  if (event.target.closest("button").dataset.time) {
+  const timeButton = e.target.closest("button");
+  if (timaButton && timeButton.dataset.time) {
     selectedTime(event.target);
   }
 });
 soundsButton.addEventListener("click", (event) => {
   const selectedButton = event.target.closest("button");
-  if (selectedButton.dataset.sound) {
+  if (selectedButton && selectedButton.dataset.sound) {
     selectSongMeditation(selectedButton);
   }
 });
