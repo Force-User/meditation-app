@@ -13,21 +13,21 @@ let fakeDuration = 60;
 outline.style.strokeDasharray = outlineLength;
 outline.style.strokeDashoffset = outlineLength;
 
-timeSelect.addEventListener("click", (event) => {
+timeSelect.addEventListener("click", (e) => {
   const timeButton = e.target.closest("button");
-  if (timaButton && timeButton.dataset.time) {
-    selectedTime(event.target);
+  if (timeButton && timeButton.dataset.time) {
+    selectedTime(e.target);
   }
 });
-soundsButton.addEventListener("click", (event) => {
-  const selectedButton = event.target.closest("button");
+soundsButton.addEventListener("click", (e) => {
+  const selectedButton = e.target.closest("button");
   if (selectedButton && selectedButton.dataset.sound) {
     selectSongMeditation(selectedButton);
   }
 });
 
-playerContainer.addEventListener("click", (event) => {
-  if(event.target.classList.contains("play")) {
+playerContainer.addEventListener("click", (e) => {
+  if(e.target.classList.contains("play")) {
     checkPlaying();
   }
     
